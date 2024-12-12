@@ -1,0 +1,25 @@
+<div class="mt-5 text-center">
+  <div class="d-inline-flex justify-content-between w-100 px-5">
+    <div class="fw-semibold h2">Events</div>
+    <%= link_to 'Create new event', new_event_path %>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Start time</th>
+        <th scope="col">End time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <th scope="row"><%= link_to event.title, event_path(event.id) %></th>
+          <td><%= event.start_time.strftime("%d %b %y : %I:%M %p") %></td>
+          <td><%= event.end_time.strftime("%d %b %y : %I:%M %p") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
