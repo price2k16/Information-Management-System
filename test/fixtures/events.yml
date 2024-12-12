@@ -1,0 +1,5 @@
+one:
+  title: Testing Event
+  description: A daily course prepration meeting
+  start_time: <%= DateTime.now %>
+  end_time: <%= DateTime.now + 30.minutes %>
