@@ -21,6 +21,7 @@ default: &default
   password: <%= ENV["INFORMATION_MANAGEMENT_SYSTEM_DATABASE_PASSWORD"] %>
 
 production:
+  url: <%= ENV['DATABASE_URL'] %>
   <<: *default
   database: information_management_system_production
   username: postgres
