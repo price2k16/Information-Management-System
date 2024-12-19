@@ -1,31 +1,45 @@
 <div class="mt-5 mx-5">
   <div>
+    <!-- Show the event title -->
     <div class="fw-semibold">Title: </div>
     <div><%= @event.title %></div>
   </div>
 
   <div class="mt-3">
+    <!-- Show the event description -->
     <div class="fw-semibold">Description: </div>
     <div><%= @event.description %></div>
   </div>
 
   <div class="mt-3">
+    <!-- Show the event start time formatted as 'day month year : hour:minute AM/PM' -->
     <div class="fw-semibold">Start time: </div>
     <div><%= @event.start_time.strftime("%d %b %y : %I:%M %p") %></div>
   </div>
 
   <div class="mt-3">
+    <!-- Show the event end time with the same format as the start time -->
     <div class="fw-semibold">End time: </div>
     <div><%= @event.end_time.strftime("%d %b %y : %I:%M %p") %></div>
   </div>
 
   <div class="mt-3">
+    <!-- Show the guest list for the event -->
     <div class="fw-semibold">Guest list: </div>
     <div><%= @event.guest_list %></div>
   </div>
 
   <div class="mt-3 d-inline-flex gap-5">
+    <!-- Link to edit the event -->
     <div><%= link_to 'Edit Event', edit_event_path(@event.id) %> </div>
+    
+    <!-- Link to delete the event, with a confirmation dialog -->
     <div><%= link_to "Destroy Event", event_path(@event.id), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></div>
+
+      <div><%= link_to 'Home', events_path %></div>
+
+
+     
   </div>
 </div>
+
