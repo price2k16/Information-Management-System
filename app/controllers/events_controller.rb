@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    # Apply the appropriate scope based on the sort parameter in the URL
+
     if params[:sort] == 'upcoming'
       @events = Event.upcoming
     elsif params[:sort] == 'past'
@@ -54,4 +54,3 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :description, :start_time, :end_time, :guest_list)
   end
 end
-

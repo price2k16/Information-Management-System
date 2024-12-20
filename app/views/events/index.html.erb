@@ -1,39 +1,38 @@
 <div class="mt-5 text-center">
-  <!-- Header with title and link to create a new event -->
-  <div class="d-inline-flex justify-content-between w-100 px-5">
-    <div class="fw-semibold h2">Events</div>
-    <%= link_to 'Create new event', new_event_path %>
-  </div>
-
-  <!-- Sorting links -->
-  <div class="my-3">
-    <%= link_to "Upcoming Events", events_path(sort: 'upcoming'), class: "btn btn-link" %> |
-    <%= link_to "Past Events", events_path(sort: 'past'), class: "btn btn-link" %> |
-    <%= link_to "All Events", events_path, class: "btn btn-link" %>
-  </div>
-
-  <table class="table">
-    <thead>
-      <tr>
-        <!-- Table headers for event details -->
-        <th scope="col">Title</th>
-        <th scope="col">Start time</th>
-        <th scope="col">End time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Loop through each event and display its details -->
-      <% @events.each do |event| %>
-        <tr>
-          <!-- Link to the event page using the event title -->
-          <th scope="row"><%= link_to event.title, event_path(event.id) %></th>
-          <!-- Format and display the event start and end times -->
-          <td><%= event.start_time.strftime("%d %b %y : %I:%M %p") %></td>
-          <td><%= event.end_time.strftime("%d %b %y : %I:%M %p") %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+<!-- Header with title and link to create a new event -->
+<div class="d-inline-flex justify-content-between w-100 px-5">
+  <div class="fw-semibold h2">Events</div>
+  <%= link_to 'Create new event', new_event_path %>
 </div>
 
+<!-- Sorting links -->
+<div class="my-3">
+  <%= link_to "Upcoming Events", events_path(sort: 'upcoming'), class: "btn btn-link" %> |
+  <%= link_to "Past Events", events_path(sort: 'past'), class: "btn btn-link" %> |
+  <%= link_to "All Events", events_path, class: "btn btn-link" %>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <!-- Table headers for event details -->
+      <th scope="col">Title</th>
+      <th scope="col">Start time</th>
+      <th scope="col">End time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop through each event and display its details -->
+    <% @events.each do |event| %>
+      <tr>
+        <!-- Link to the event page using the event title -->
+        <th scope="row"><%= link_to event.title, event_path(event.id) %></th>
+        <!-- Format and display the event start and end times -->
+        <td><%= event.start_time.strftime("%d %b %y : %I:%M %p") %></td>
+        <td><%= event.end_time.strftime("%d %b %y : %I:%M %p") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
 

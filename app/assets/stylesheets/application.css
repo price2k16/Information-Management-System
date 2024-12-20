@@ -1,1 +1,140 @@
-
+/* Styling for the main container */
+.mt-5.text-center {
+    margin-top: 3rem !important;
+    text-align: center !important;
+  }
+  
+  /* Styling for the header section with title and 'Create new event' link */
+  .d-inline-flex.justify-content-between.w-100.px-5 {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .fw-semibold.h2 {
+    font-weight: bold !important;
+    font-size: 5rem !important;
+    color: blackh !important;
+  }
+  
+  .d-inline-flex.justify-content-between.w-100.px-5 a {
+    align-self: center !important;
+    font-size: 1rem !important;
+    color: #007bff !important;
+    text-decoration: none !important;
+    padding: 0.5rem !important;
+    border: 1px solid #007bff !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .d-inline-flex.justify-content-between.w-100.px-5 a:hover {
+    background-color: #007bff !important;
+    color: white !important;
+  }
+  
+  /* Styling for sorting links */
+  .my-3 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .my-3 .btn-link {
+    font-size: 1rem !important;
+    color: #007bff !important;
+    text-decoration: none !important;
+    padding: 0.5rem !important;
+    margin-right: 10px !important;
+    transition: color 0.3s ease !important;
+  }
+  
+  .my-3 .btn-link:hover {
+    color: #0056b3 !important;
+  }
+  
+  /* Table styling */
+  .table {
+    width: 100% !important;
+    margin-top: 2rem !important;
+    border-collapse: collapse !important;
+  }
+  
+  .table th,
+  .table td {
+    padding: 1rem !important;
+    text-align: left !important;
+  }
+  
+  .table th {
+    background-color: #f8f9fa !important;
+    color: #495057 !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #dee2e6 !important;
+  }
+  
+  .table td {
+    background-color: #ffffff !important;
+    color: #495057 !important;
+    border-bottom: 1px solid #dee2e6 !important;
+  }
+  
+  .table tr:hover {
+    background-color: red !important;
+  }
+  
+  .table th,
+  .table td a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+  
+  .table th a:hover,
+  .table td a:hover {
+    text-decoration: underline !important;
+  }
+  
+  body {
+    background-image: url('Bi.jpg') !important; /*adding the background image*/
+    background-size: cover !important;  /* Make the background cover the entire page */  /* Center the background */
+    background-repeat: no-repeat !important;  /* Prevent the image from repeating */
+  }
+  
+  table {
+    width: 100% !important;  /* Ensure the table takes up the full width */
+    border-collapse: collapse !important;  /* Remove spacing between borders */
+    margin-top: 2rem !important;  /* Add space on top */
+    background-color: #f9f9f9 !important;  /* Set a light background color */
+  }
+  
+  th, td {
+    padding: 1rem !important;  /* Add space inside the cells */
+    text-align: left !important;  /* Align text to the left */
+    border: 1px solid #ddd !important;  /* Add a light border around the cells */
+  }
+  
+  th {
+    background-color: #007bff !important;  /* Set a background color for headers */
+    color: white !important;  /* White text for header */
+    font-weight: bold !important;  /* Make the header text bold */
+    text-transform: uppercase !important;  /* Make header text uppercase */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2 !important;  /* Add a light gray background to every even row */
+  }
+  
+  tr:hover {
+    background-color: #e2e2e2 !important;  /* Highlight rows on hover */
+  }
+  
+  td a {
+    text-decoration: none !important;  /* Remove underline from links */
+    color: #007bff !important;  /* Make links blue */
+  }
+  
+  td a:hover {
+    color: #0056b3 !important;  /* Darken link color on hover */
+  }
+  
